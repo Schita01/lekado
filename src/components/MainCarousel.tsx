@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "aos/dist/aos.css"; // Import AOS CSS
-import AOS from 'aos'; // Import AOS
+import AOS from "aos"; // Import AOS
+
+type Language = "Geo" | "Rug" | "Eng"; // Define a type for the language keys
 
 const MainCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [selectedLanguage, setSelectedLanguage] = useState("Eng"); // Default language
+  const [selectedLanguage, setSelectedLanguage] = useState<Language>("Eng"); // Use the defined type
 
   const translations = {
     Geo: {
@@ -36,9 +38,11 @@ const MainCarousel = () => {
     AOS.init(); // Initialize AOS once when the component mounts
   }, []);
 
-  const handleLanguageChange = (language: React.SetStateAction<string>) => {
+  const handleLanguageChange = (language: Language) => {
     setSelectedLanguage(language);
   };
+
+  handleLanguageChange
 
   const [sliderRef, instanceRef] = useKeenSlider(
     {
@@ -87,8 +91,7 @@ const MainCarousel = () => {
 
   return (
     <>
-      <div className="language-selector-container">
-      </div>
+      <div className="language-selector-container"></div>
       <div ref={sliderRef} className="keen-slider main-keen-slider">
         <Slide translation={currentTranslation} />
         {/* Add more slides as needed */}
@@ -98,14 +101,15 @@ const MainCarousel = () => {
       {/* Navigation Arrows */}
       <Arrow
         left
-        onClick={(e:any) => e.stopPropagation() || instanceRef.current?.prev()}
+        onClick={(e: { stopPropagation: () => any; }) => e.stopPropagation() || instanceRef.current?.prev()}
         disabled={currentSlide === 0}
       />
       <Arrow
-        onClick={(e:any) => e.stopPropagation() || instanceRef.current?.next()}
-        disabled={currentSlide === instanceRef.current?.track.details.slides.length - 1}
+        right
+        onClick={(e: { stopPropagation: () => any; }) => e.stopPropagation() || instanceRef.current?.prev()}
+        disabled={currentSlide === 0}
       />
-
+     
       {/* Dots Navigation */}
       <div className="dots">
         {[...Array(instanceRef.current?.track.details.slides.length || 0).keys()].map((idx) => (

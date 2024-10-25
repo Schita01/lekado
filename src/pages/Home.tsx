@@ -1,9 +1,9 @@
 import Categories from '../components/Categories';
-import MainCarousel from '../components/MainCarousel';
 import ViewArea from '../components/ViewArea';
 
 import Products from '../components/Products';
 import DiscountArea from '../components/DiscountArea';
+import MainCarousel from '../components/MainCarousel';
 
 const Home = () => {
   // Get the current language from the context (or pass it as a prop if needed)

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useKeenSlider, KeenSliderPlugin } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import VapeCard from "./VapeCard";
@@ -33,6 +33,7 @@ const animation = { duration: 25000, easing: (t: number) => t };
 export default function Categories() {
   const [small, setSmall] = useState(false);
 
+  setSmall
   const [sliderRef] = useKeenSlider<HTMLDivElement>(
     {
       loop: true,

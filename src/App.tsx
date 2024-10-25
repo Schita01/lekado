@@ -10,6 +10,7 @@ import About from "./pages/About";
 import Products from "./components/Products";
 import ProductDetails from "./pages/ProductDetails";
 import Contact from "./pages/Contact";
+
 import Footer from "./components/Footer";
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
       duration: 1200,
     });
   }, []);
+
+  
 
   return (
       <div className="wrapper">

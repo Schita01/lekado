@@ -1,7 +1,6 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const ProductCard = ({ product, onAddToCart }) => {
+const ProductCard = ({ product, onAddToCart }:any) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -16,7 +15,7 @@ const ProductCard = ({ product, onAddToCart }) => {
       </div>
       <h3 className='product-card-h3'>{product.name}</h3>
       <p className='discount-p'>
-        <strike>{product.oldPrice}</strike>
+        <p>{product.oldPrice}</p>
         <span className="new-price">{product.newPrice}</span>
       </p>
       <div className="rating">⭐⭐⭐⭐⭐</div>

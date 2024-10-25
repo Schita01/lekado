@@ -7,10 +7,10 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Vacancy from "./pages/Vacancy";
 import About from "./pages/About";
+
 import Products from "./components/Products";
 import ProductDetails from "./pages/ProductDetails";
 import Contact from "./pages/Contact";
-
 import Footer from "./components/Footer";
 
 function App() {
@@ -18,6 +18,14 @@ function App() {
     AOS.init({
       duration: 1200,
     });
+  }, []);
+  
+  useEffect(() => {
+    try {
+      AOS.init({ duration: 1200 });
+    } catch (error) {
+      console.error("AOS initialization failed:", error);
+    }
   }, []);
 
   

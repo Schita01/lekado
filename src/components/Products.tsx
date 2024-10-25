@@ -37,6 +37,7 @@ const Products = () => {
 
   return (
     <div className="products-section">
+       
       <div className="container">
         <div className="categories">
           <h2 className="products-section-h2">Latest Arrival Products</h2>

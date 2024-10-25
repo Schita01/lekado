@@ -1,4 +1,5 @@
 import React from 'react';
+// import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
 // Define the container style for the map
 const containerStyle = {
@@ -7,14 +8,12 @@ const containerStyle = {
 };
 
 containerStyle
-// Define the map's center coordinates
 const center = {
   lat: 43.4142989,
   lng: -124.2301242,
 };
 
 center
-// Define the markers for the map
 const markers = [
   {
     position: {

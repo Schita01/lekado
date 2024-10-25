@@ -1,3 +1,4 @@
+
 import Products from '../components/Products'
 
 const Product = () => {

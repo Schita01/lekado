@@ -1,4 +1,5 @@
 import Categories from '../components/Categories';
+
 import ViewArea from '../components/ViewArea';
 
 import Products from '../components/Products';
@@ -11,7 +12,7 @@ const Home = () => {
   // Translations for the Home component
 
   // Get the current translation based on the selected language
-
+  
   return (
     <section className='home-section'>
       <div className="home-container">

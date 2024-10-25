@@ -1,4 +1,3 @@
-import React from 'react';
 import { useParams } from 'react-router-dom';
 
 const ProductDetails = () => {
@@ -20,6 +19,7 @@ const ProductDetails = () => {
         <div className="vacancy_top">
                 <span className='top-span'>პროდუქცია</span>
             </div>
+            
       <div className="container">
         <div className="product-details-container">
           <div className="product-details-img">

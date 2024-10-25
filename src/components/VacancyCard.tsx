@@ -1,8 +1,6 @@
 import logo from "../assets/ლოგო-PNG-150x150.png";
 import featuredLogo from "../assets/Check-Mark-Green-SVG-1.svg";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse } from '@fortawesome/free-solid-svg-icons';
-import { SetStateAction, useState } from "react";
+
 
 const VacancyCard = (props: { activeAccordionNumber: number | null, handleClick: (itemNumber: number) => void, itemNumber: number, content: string }) => {
     const { activeAccordionNumber, handleClick, itemNumber, content } = props;

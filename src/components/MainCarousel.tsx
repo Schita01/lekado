@@ -49,7 +49,7 @@ const MainCarousel = () => {
     },
     [
       (slider) => {
-        let timeout;
+        let timeout: number | undefined;
         let mouseOver = false;
 
         function clearNextTimeout() {
@@ -98,11 +98,11 @@ const MainCarousel = () => {
       {/* Navigation Arrows */}
       <Arrow
         left
-        onClick={(e) => e.stopPropagation() || instanceRef.current?.prev()}
+        onClick={(e:any) => e.stopPropagation() || instanceRef.current?.prev()}
         disabled={currentSlide === 0}
       />
       <Arrow
-        onClick={(e) => e.stopPropagation() || instanceRef.current?.next()}
+        onClick={(e:any) => e.stopPropagation() || instanceRef.current?.next()}
         disabled={currentSlide === instanceRef.current?.track.details.slides.length - 1}
       />
 
@@ -123,7 +123,7 @@ const MainCarousel = () => {
   );
 };
 
-const Slide = ({ translation }) => {
+const Slide = ({ translation }:any) => {
   return (
     <div className="keen-slider__slide number-slide1">
       <div className="slider-container s-c-1">
@@ -149,7 +149,7 @@ const Slide = ({ translation }) => {
 
 export default MainCarousel;
 
-function Arrow({ disabled, left, onClick }) {
+function Arrow({ disabled, left, onClick }:any) {
   const disabledClass = disabled ? " arrow--disabled" : "";
   return (
     <svg

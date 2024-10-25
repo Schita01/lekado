@@ -1,4 +1,3 @@
-import logo from "../assets/1-v.jpeg"; // or "../assets/Inkcontober_Furious-512.webp", depending on the logo you want
 
 const VapeCard = ({title, text, salery, img}: any) => {
   return (

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { SetStateAction, useEffect, useState } from "react";
 import logo from "../assets/logo.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -24,12 +24,15 @@ const Navbar = () => {
     { name: "კონტაქტი", path: "/contact" },
   ];
 
+  setIsItem
+
   useEffect(() => {
-    const debounce = (func, delay) => {
-      let timer;
-      return (...args) => {
+    const debounce = (func: { (): void; (arg0: any): any; }, delay: any | undefined) => {
+      let timer: number | undefined;
+      return (..._args:any[]) => {
         clearTimeout(timer);
-        timer = setTimeout(() => func(...args), delay);
+        timer = setTimeout(() => func(), delay); // Invalid spread syntax using `args[]`
+
       };
     };
 
@@ -45,7 +48,7 @@ const Navbar = () => {
     };
   }, []);
 
-  const handleItemClick = (item) => {
+  const handleItemClick = (item: SetStateAction<string>) => {
     if (activeItem !== item) {
       setActiveItem(item);
     }

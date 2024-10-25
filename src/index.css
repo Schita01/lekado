@@ -315,7 +315,6 @@ body {
 .home-section {
   width: 100%;
   max-width: 100%;
-  /* height: 70vh; */
 }
 
 .home-container {
@@ -329,9 +328,6 @@ body {
   margin-bottom: 150px;
 }
 
-
-.s-c-1 {
-}
 
 .main-keen-slider {
   
@@ -1693,9 +1689,7 @@ h1 {
 }
 
 @media only screen and (max-width: 1240px) {
-  .product-card {
-    /* width: 47%; */
-  }
+  
 
   .keen-slider {
     width: 200%;

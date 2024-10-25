@@ -1672,6 +1672,16 @@ h1 {
   cursor: pointer;
 }
 
+.mapswrapper iframe {
+  position: relative;
+  z-index: 2;
+}
+
+.mapswrapper {
+  background: #fff;
+  position: relative;
+}
+
 .search__icon {
   height: 1.3em;
   width: 1.3em;

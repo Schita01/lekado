@@ -1,4 +1,3 @@
-import React from 'react'
 import  fireLogo from "../assets/fire.svg";
 
 

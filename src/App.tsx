@@ -7,8 +7,6 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Vacancy from "./pages/Vacancy";
 import About from "./pages/About";
-import Product from "./pages/Product";
-import { Switch } from "@nextui-org/react";
 import Products from "./components/Products";
 import ProductDetails from "./pages/ProductDetails";
 import Contact from "./pages/Contact";

@@ -1,5 +1,4 @@
 import React from 'react';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
 // Define the container style for the map
 const containerStyle = {
@@ -7,12 +6,14 @@ const containerStyle = {
   height: '400px',
 };
 
+containerStyle
 // Define the map's center coordinates
 const center = {
   lat: 43.4142989,
   lng: -124.2301242,
 };
 
+center
 // Define the markers for the map
 const markers = [
   {
@@ -30,6 +31,8 @@ const markers = [
     title: 'Seattle, WA',
   },
 ];
+
+markers
 
 const Contact = (props: React.SVGProps<SVGSVGElement>) => {
   return (
@@ -106,16 +109,7 @@ const Contact = (props: React.SVGProps<SVGSVGElement>) => {
       <a href="https://www.taxuni.com/texas-food-stamps-guide/" style={{ color: 'rgba(0,0,0,0)', borderRadius: "10", position: 'absolute', left: 0, top: 0, zIndex: 0 }}>
         Texas Food Stamps Guide
       </a>
-      <style jsx>{`
-        .mapswrapper {
-          background: #fff;
-          position: relative;
-        }
-        .mapswrapper iframe {
-          position: relative;
-          z-index: 2;
-        }
-      `}</style>
+     
             </div>
           </div>
         </div>
